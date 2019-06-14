@@ -54,8 +54,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 Define the the React components and the architectural design of your app.
 
-#### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
-
 ## ERD
 
 Create the ERD model for your project
