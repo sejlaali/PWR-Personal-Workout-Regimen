@@ -52,21 +52,24 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## React Architectural Design
 
-Define the the React components and the architectural design of your app.
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560597787/Screen_Shot_2019-06-15_at_7.22.35_AM.png
 
 ## ERD
 
-Create the ERD model for your project
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560596697/Screen_Shot_2019-06-15_at_7.04.23_AM.png
+
+Interval training is our category of workouts, and the workouts are the 10 options a user can choose from. The idea is that if we have time, we can always add another category(model) of workouts such as HIIT, Crossfit etc. that will have its own set of workouts.
 
 ## Functional Components
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
-
-#### SAMPLE.....
 | Component | Description | 
 | --- | :---: |  
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Landing Page | This will render landing page/component that will use svgs | 
+| List of Workouts | This will render list of workout options from our model|
+| Create a new workout | This will be rendered on the List of Workouts component & will allow the user to create a new workout|
+| Show One Specific Workout | This will render the workout that the user clicked on and will have all info about workout shown, as well as ability to edit the workout information and delete it|
+| Personal Workout Regimen | From the list of workouts, we want our users to be able to select 4 out of the 10 workouts to add to their Personal Workout Regimen. This component will render the 4 workouts chosen|
+
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
