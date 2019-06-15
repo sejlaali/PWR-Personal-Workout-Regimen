@@ -60,7 +60,7 @@ https://res.cloudinary.com/dfzjh0dui/image/upload/v1560596697/Screen_Shot_2019-0
 
 Interval training is our category of workouts, and the workouts are the 10 options a user can choose from. The idea is that if we have time, we can always add another category(model) of workouts such as HIIT, Crossfit etc. that will have its own set of workouts.
 
-## Functional Components
+## (Functional) Components
 
 | Component | Description | 
 | --- | :---: |  
@@ -74,12 +74,14 @@ Interval training is our category of workouts, and the workouts are the 10 optio
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
-#### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs |
-| Total | H | 6hrs| 5hrs | 
+| Landing Page | L | 3hrs| hrs |
+| List of Workouts | H | 3hrs| hrs |
+| Create New Workout | H | 3hrs| hrs |
+| Show One Specific Workout | H | 3hrs| hrs |
+| Personal Workout Regimen | H | 6hrs| hrs |
+| Total | H | 18hrs| 0hrs | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
