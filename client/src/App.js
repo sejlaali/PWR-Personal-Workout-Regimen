@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
@@ -6,12 +7,14 @@ import ShowAllWorkouts from "./Components/ShowAllWorkouts";
 import CreateNewWorkout from "./Components/CreateNewWorkout";
 import OneWorkout from './Components/OneWorkout'
 
+
 class App extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
+
       <div>
         <Switch>
           <Route exact path="/" component={LandingPage} />
@@ -21,6 +24,10 @@ class App extends Component {
         </Switch>
       </div>
     );
+
+
+    
+
   }
 }
 
