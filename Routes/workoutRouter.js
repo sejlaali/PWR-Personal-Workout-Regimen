@@ -22,3 +22,30 @@ workoutRouter.get('/:id', async (req, res) =>{
         workOuts
     })
 })
+
+// POST (create) one workout
+workoutRouter.post('/', async (req, res)=>{
+    const createWorkOut = await Workout.create(req.body)
+    res.json({
+        createWorkOut: createWorkOut
+    })
+})
+
+// PUT (edit) one workout
+workoutRouter.put('/:id' , async (req, res) =>{
+   const result = await Workout.update(req.body ,{
+       where:{
+           id: req.params.id
+       }
+   }) 
+   res.json({result})
+}) 
+
+// DELETE one workout
+workoutRouter.delete('/:id', async(req, res) =>{
+    const deleteWorkOut = await Workout.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+})
