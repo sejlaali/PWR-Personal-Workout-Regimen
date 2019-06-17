@@ -25,6 +25,10 @@ Workout app where there is a list of about 10 workouts, and the user gets to cho
 
 https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778423/20190617_092106.jpg
 https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778584/20190617_092100.jpg
+
+https://res.cloudinary.com/diqd6zflz/image/upload/v1560778830/Screen_Shot_2019-06-17_at_9.27.44_AM_lhkd6j.png
+https://res.cloudinary.com/diqd6zflz/image/upload/v1560778892/Screen_Shot_2019-06-17_at_9.28.02_AM_eegadt.png
+
 ## Priority Matrix
 
 https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778440/20190617_093239.jpg
