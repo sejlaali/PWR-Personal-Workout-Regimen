@@ -13,8 +13,7 @@ constructor(props) {
 
 <Router to="/" component={LandingPage}></Router>
 <Router to="/home" component={ShowAllWorkouts}></Router>
-<Router to="/:id" component={OneWorkout}></Router>
-<Router to="/" component={PersonalWorkoutRegimen}></Router>
+
 </div>
     )
   }
