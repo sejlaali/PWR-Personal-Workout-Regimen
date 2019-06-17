@@ -23,8 +23,8 @@ Workout app where there is a list of about 10 workouts, and the user gets to cho
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
-
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778423/20190617_092106.jpg
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778584/20190617_092100.jpg
 ## Priority Matrix
 
 https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778440/20190617_093239.jpg
