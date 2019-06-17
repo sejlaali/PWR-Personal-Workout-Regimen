@@ -23,15 +23,19 @@ Workout app where there is a list of about 10 workouts, and the user gets to cho
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+https://res.cloudinary.com/diqd6zflz/image/upload/v1560778830/Screen_Shot_2019-06-17_at_9.27.44_AM_lhkd6j.png
+https://res.cloudinary.com/diqd6zflz/image/upload/v1560778892/Screen_Shot_2019-06-17_at_9.28.02_AM_eegadt.png
+
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778423/20190617_092106.jpg
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778584/20190617_092100.jpg
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778440/20190617_093239.jpg
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### SAMPLE.....
 #### MVP 
@@ -56,7 +60,7 @@ https://res.cloudinary.com/dfzjh0dui/image/upload/v1560597787/Screen_Shot_2019-0
 
 ## ERD
 
-https://res.cloudinary.com/dfzjh0dui/image/upload/v1560596697/Screen_Shot_2019-06-15_at_7.04.23_AM.png
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778358/Screen_Shot_2019-06-17_at_9.32.10_AM.png
 
 Interval training is our category of workouts, and the workouts are the 10 options a user can choose from. The idea is that if we have time, we can always add another category(model) of workouts such as HIIT, Crossfit etc. that will have its own set of workouts.
 
