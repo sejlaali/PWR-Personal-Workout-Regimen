@@ -4,7 +4,7 @@ const workoutRouter = express.Router()
 const{ Workout } = require('../models');
 // workout routes
 
-workoutRouter.get('/home' , async (req, res) => {
+workoutRouter.get('/' , async (req, res) => {
     const workOuts = await Workout.findAll()
     res.json({
         workOuts: workOuts
@@ -19,7 +19,7 @@ workoutRouter.get('/:id', async (req, res) =>{
         },
     })
     res.json({
-        workOuts
+        oneWorkOut
     })
 })
 
@@ -27,7 +27,7 @@ workoutRouter.get('/:id', async (req, res) =>{
 workoutRouter.post('/', async (req, res)=>{
     const createWorkOut = await Workout.create(req.body)
     res.json({
-        createWorkOut: createWorkOut
+        createWorkOut
     })
 })
 
