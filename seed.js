@@ -1,9 +1,7 @@
-const { Workouts, Regimen } = require('./models');
+const { Workout, Regimen } = require('./models');
 
-async function createWorkouts(){
-  await Workout.destroy({ where: {}});
+ const createWorkouts = async () => {
 
-  try{
     await Workout.bulkCreate([
       {
         name: 'Pull-Ups',
@@ -66,47 +64,43 @@ async function createWorkouts(){
         difficulty:'Moderate'
         },
     ]);
-  }catch(e){
-    console.warn(e);
   }
-}
-
 
 
 ///////////////////////
-async function createRegimen(){
-    await Regimen.destroy({ where:{}});
-    await Regimen.create({
-        name: 'planks',
-        duration: '2',
-        description: 'Holding the body (light as a feather) stiff as a board develops strength primarily in the core',
-        difficulty:'moderate'
-    })
-  }
+// async function createRegimen(){
+//     await Regimen.destroy({ where:{}});
+//     await Regimen.create({
+//         name: 'planks',
+//         duration: '2',
+//         description: 'Holding the body (light as a feather) stiff as a board develops strength primarily in the core',
+//         difficulty:'moderate'
+//     })
+//   }
 
-  async function associateWorkoutAndRegimen(){
-    const regimen = await Workout.findOne({
-      where: { name: 'Dave'}
-    });
-    const workouts = await Regimen.findAll();
-    await regimen.setWorkouts(workouts);
-    const associateWorkouts = await Workouts.findAll({
-      include: Regimen
-    })
-    console.log(JSON.stringify(associateWorkouts, null, 2));
-  }
+//   async function associateWorkoutAndRegimen(){
+//     const regimen = await Workout.findOne({
+//       where: { name: 'Dave'}
+//     });
+//     const workouts = await Regimen.findAll();
+//     await regimen.setWorkouts(workouts);
+//     const associateWorkouts = await Workouts.findAll({
+//       include: Regimen
+//     })
+//     console.log(JSON.stringify(associateWorkouts, null, 2));
+//   }
 
-  async function seed(){
-    try{
-      await createWorkouts();
-      await createRegimen();
-      await associateWorkoutAndRegimen();
-    }catch (e){
-      console.log(e)
-      }finally {
-        process.exit();
-      }
-    }
+//   async function seed(){
+//     try{
+//       await createWorkouts();
+//       await createRegimen();
+//       await associateWorkoutAndRegimen();
+//     }catch (e){
+//       console.log(e)
+//       }finally {
+//         process.exit();
+//       }
+//     }
   
-  seed();
+  createWorkouts();
   
