@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios'
 
 class CreateNewWorkout extends Component {
   constructor(props) {
@@ -10,7 +11,31 @@ class CreateNewWorkout extends Component {
       difficulty: "",
       duration: 0
     };
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  async handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    })
+    }
+  
+    async handleSubmit(event) {
+    event.preventDefault();
+    await axios.post('/icecreams', {
+      flavor: this.state.flavor,
+      description: this.state.description,
+      rating: this.state.rating,
+    })
+    this.setState({
+      redirect: true
+    })
+    }
+  
 
   render() {
     return (
@@ -28,7 +53,7 @@ class CreateNewWorkout extends Component {
             placeholder="Description"
             value={this.state.description}
           />
-          <select name="difficulty" type="text" value={this.state.difficulty}>
+          <select onClick={this.handleChange} onSubmit={this.handleSubmit} name="difficulty" type="text" value={this.state.difficulty}>
             <option>Easy</option>
             <option>Moderate</option>
             <option>Advanced</option>

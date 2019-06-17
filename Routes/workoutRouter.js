@@ -4,7 +4,7 @@ const workoutRouter = express.Router()
 const{ Workout } = require('../models');
 // workout routes
 
-workoutRouter.get('/home' , async (req, res) => {
+workoutRouter.get('/' , async (req, res) => {
     const workOuts = await Workout.findAll()
     res.json({
         workOuts: workOuts

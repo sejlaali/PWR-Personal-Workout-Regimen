@@ -23,8 +23,6 @@ app.get('/', (req, res)=>{
 app.use('/workouts',workoutRouter)
 
 
-
-
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
