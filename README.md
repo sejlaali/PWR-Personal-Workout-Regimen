@@ -35,7 +35,7 @@ https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778440/20190617_093239.jp
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### SAMPLE.....
 #### MVP 
