@@ -4,7 +4,7 @@ const workoutRouter = express.Router()
 const{ Workout } = require('../models');
 // workout routes
 
-workoutRouter.get('/' , async (req, res) => {
+workoutRouter.get('/home' , async (req, res) => {
     const workOuts = await Workout.findAll()
     res.json({
         workOuts: workOuts
@@ -48,4 +48,11 @@ workoutRouter.delete('/:id', async(req, res) =>{
             id: req.params.id
         }
     })
-})
+    res.json({
+        message: "This workout has been deleted, please add another..."
+    })
+});
+
+module.exports = {
+    workoutRouter
+};
