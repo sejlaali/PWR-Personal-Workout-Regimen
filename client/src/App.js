@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import {Router} from 'react-router-dom'
 
 class App extends Component {
 constructor(props) {
@@ -11,7 +12,8 @@ constructor(props) {
 
 
 <Router to="/" component={LandingPage}></Router>
-<Router to="/home" component={ShowAllWorkout}></Router>
+<Router to="/home" component={ShowAllWorkouts}></Router>
+
 </div>
     )
   }
