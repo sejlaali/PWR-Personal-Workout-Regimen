@@ -19,7 +19,7 @@ workoutRouter.get('/:id', async (req, res) =>{
         },
     })
     res.json({
-        workOuts
+        oneWorkOut
     })
 })
 
