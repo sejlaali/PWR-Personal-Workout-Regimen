@@ -10,8 +10,8 @@ constructor(props) {
 <div>PWR App
 
 
-<Router to="/" component="LandingPage"></Router>
-<Router to="/home" component="ShowAllWorkout"></Router>
+<Router to="/" component={LandingPage}></Router>
+<Router to="/home" component={ShowAllWorkout}></Router>
 </div>
     )
   }
