@@ -27,7 +27,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 ## Priority Matrix
 
-https://res.cloudinary.com/dfzjh0dui/image/upload/v1560776489/img_4504.jpg
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778440/20190617_093239.jpg
 
 ### MVP/PostMVP - 5min
 
@@ -56,7 +56,7 @@ https://res.cloudinary.com/dfzjh0dui/image/upload/v1560597787/Screen_Shot_2019-0
 
 ## ERD
 
-https://res.cloudinary.com/dfzjh0dui/image/upload/v1560596697/Screen_Shot_2019-06-15_at_7.04.23_AM.png
+https://res.cloudinary.com/dfzjh0dui/image/upload/v1560778358/Screen_Shot_2019-06-17_at_9.32.10_AM.png
 
 Interval training is our category of workouts, and the workouts are the 10 options a user can choose from. The idea is that if we have time, we can always add another category(model) of workouts such as HIIT, Crossfit etc. that will have its own set of workouts.
 
