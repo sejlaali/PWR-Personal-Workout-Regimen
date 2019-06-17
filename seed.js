@@ -4,64 +4,64 @@ const { Workout, Regimen } = require('./models');
 
     await Workout.bulkCreate([
       {
-        name: 'pullUps',
+        name: 'Pull-Ups',
         duration: 3,
         description: 'Holding the entire body under tension, you pull yourself up by the arms until your chin extends over the bar',
-        difficulty: 'advanced'
+        difficulty: 'Advanced'
         },
         {
-        name: 'chinUps',
+        name: 'Chin-Ups',
         duration: 3,
         description: 'Your back and arms pull your body up while your abs prevent your lower back from arching',
-        difficulty: 'moderate'
+        difficulty: 'Moderate'
         },
         {
-        name: 'situps',
+        name: 'Sit-Ups',
         duration: '2',
         description: 'an exercise in which a person lies flat on the back, lifts the torso to a sitting position, and then lies flat again without changing the position of the legs',
-        difficulty: 'easy'
+        difficulty: 'Easy'
         },
         {
-        name: 'bicep_curls',
+        name: 'Bicep Curls',
         duration: 4,
         description: 'Keep your elbows close to your torso and rotate the palms of your hands until they are facing forward',
-        difficulty: 'easy'
+        difficulty: 'Easy'
         },
         {
-        name: 'seated_row',
+        name: 'Seated Row',
         duration: 2,
         description: 'Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominals',
-        difficulty: "moderate"
+        difficulty: "Moderate"
         },
         {
-        name: 'lat_pulldown',
+        name: 'Lats Pulldown',
         duration: 3,
         description: 'Sit at a lat pulldown station and grab the bar with an overhand grip thats just beyond shoulder width',
-        difficulty:'moderate'
+        difficulty:'Moderate'
         },
         {
-        name: 'lunges',
+        name: 'Lunges',
         duration: 4,
         description: 'Lunges can help you develop lower-body strength and endurance, and unlike squats, they are highly effective at evening out muscle imbalances',
-        difficulty:'moderate'
+        difficulty:'Moderate'
         },
         {
-        name: 'ab_roller',
+        name: 'Ab Rollers',
         duration: 4,
         description: 'From a standing position, grip the ab wheel firmly in both hands and fold forward at the waist',
-        difficulty:'advanced'
+        difficulty:'Advanced'
         },
         {
-        name: 'squats',
+        name: 'Squats',
         duration: 4,
         description: 'Stand with your feet hip-width apart, hands clasped in front of your chest',
-        difficulty:'moderate'
+        difficulty:'Moderate'
         },
         {
-        name: 'planks',
+        name: 'Planks',
         duration: '2',
         description: 'Holding the body (light as a feather) stiff as a board develops strength primarily in the core',
-        difficulty:'moderate'
+        difficulty:'Moderate'
         },
     ]);
   }
