@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import {Redirect} from 'react-router-dom'
 
 class CreateNewWorkout extends Component {
   constructor(props) {
@@ -26,10 +27,11 @@ class CreateNewWorkout extends Component {
   
     async handleSubmit(event) {
     event.preventDefault();
-    await axios.post('/icecreams', {
-      flavor: this.state.flavor,
+    await axios.post('http://localhost:3001/workouts', {
+      name: this.state.name,
       description: this.state.description,
-      rating: this.state.rating,
+      difficulty: this.state.difficulty,
+      duration: this.state.duration
     })
     this.setState({
       redirect: true
@@ -38,8 +40,9 @@ class CreateNewWorkout extends Component {
   
 
   render() {
-    return (
-      <div>
+      return (
+          <div>
+          {this.state.redirect ? <Redirect to="/home"/> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input
             name="name"

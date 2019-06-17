@@ -19,8 +19,8 @@ class App extends Component {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/home" component={ShowAllWorkouts} />
           <Route exact path="/workout/:id" component={OneWorkout} />
-          <Route exact path="/workout/new/create" component={CreateNewWorkout} />
-          <Route exact path="/workouts/:id/edit" component={EditWorkout} />
+          <Route exact path="/workouts/create" component={CreateNewWorkout} />
+          <Route exact path="/workout/:id/edit" component={EditWorkout} />
         </Switch>
       </div>
     );

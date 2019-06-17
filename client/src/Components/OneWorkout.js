@@ -43,7 +43,7 @@ class OneWorkout extends Component {
         <p>Description: {this.state.description}</p>
         <p>Difficulty: {this.state.difficulty}</p>
         <p>Duration: {this.state.duration} minutes</p>
-        <Link to={`/workouts/${this.props.match.params.id}/edit`}><button>EDIT</button></Link>
+        <Link to={`/workout/${this.props.match.params.id}/edit`}><button>EDIT</button></Link>
         <button onClick={this.handleDelete}>DELETE</button>
         </div>
         )

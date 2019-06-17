@@ -27,7 +27,7 @@ workoutRouter.get('/:id', async (req, res) =>{
 workoutRouter.post('/', async (req, res)=>{
     const createWorkOut = await Workout.create(req.body)
     res.json({
-        createWorkOut: createWorkOut
+        createWorkOut
     })
 })
 
