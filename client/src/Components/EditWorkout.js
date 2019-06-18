@@ -19,9 +19,10 @@ constructor(props) {
   
     componentDidMount = async () => {
         const response = await axios.get(
-          `http://localhost:3001/workouts/${this.props.match.params.id}`
+          `http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`
         );
-        const workout = response.data.oneWorkOut
+        const workout = response.data.oneworkout
+        console.log(workout)
 
         this.setState({
           description: workout.description,
@@ -46,8 +47,7 @@ constructor(props) {
     
       async handleSubmit(event) {
       event.preventDefault();
-      await axios.put(`http://localhost:3001/workouts/${this.props.match.params.id}`, {
-
+      await axios.put(`http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`, {
 
         name: this.state.name,
         description: this.state.description,
@@ -62,7 +62,7 @@ constructor(props) {
     render() {
         return (
             <div>
-          {this.state.redirect ? <Redirect to="/home"/> : null}
+          {this.state.redirect ? <Redirect to={`/category/${this.props.match.params.categoryId}`}/> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input
             name="name"
