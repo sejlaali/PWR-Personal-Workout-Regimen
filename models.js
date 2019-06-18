@@ -1,4 +1,3 @@
-
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
@@ -13,18 +12,20 @@ const Workout = sequelize.define('workout', {
     name: Sequelize.STRING,
     duration: Sequelize.INTEGER,
     description: Sequelize.STRING,
-    difficulty: Sequelize.STRING
+    difficulty: Sequelize.STRING,
+    regimen: { type: Sequelize.BOOLEAN,
+      defaultValue: false }
 });
 
-const Regimen = sequelize.define('regimen', {
-    workout_id: Sequelize.INTEGER,
+const Category = sequelize.define('category', {
+    title: Sequelize.STRING
 });
 
-Workout.belongsTo(Regimen);
-Regimen.hasMany(Workout, {onDelete: 'cascade'});
+Category.hasMany(Workout)
+Workout.belongsTo(Category)
 
 module.exports = {
   sequelize,
   Workout,
-  Regimen
+  Category
 };
