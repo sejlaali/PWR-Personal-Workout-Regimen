@@ -13,6 +13,10 @@
   body{
     background: linear-gradient(to left, rgb(80, 81, 74), beige, rgba(4, 9, 150, 0.934))
   }
+  #personal{
+    color: white;
+    
+  }
   
   #outline{
     stroke:none;
