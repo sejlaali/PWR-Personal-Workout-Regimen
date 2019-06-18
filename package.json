@@ -8,7 +8,7 @@
     "start": "nodemon server.js",
     "db:init": "dropdb --if-exists PWR_db && createdb PWR_db",
     "dev": "nodemon server.js",
-    "resetDb": "node resetDb.js",
+    "resetDb": "node reset.js",
     "seed": "node seed.js",
     "debug": "nodemon --inspect-brk server.js"
   },
