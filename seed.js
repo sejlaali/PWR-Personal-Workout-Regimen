@@ -1,4 +1,4 @@
-const { Workout, Regimen } = require('./models');
+const { Workout, Category } = require('./models');
 
  const createWorkouts = async () => {
 
@@ -66,41 +66,11 @@ const { Workout, Regimen } = require('./models');
     ]);
   }
 
+const createCategory = async () => {
+await Category.create({
+  title: 'Interval Training'
+})
+}
 
-///////////////////////
-// async function createRegimen(){
-//     await Regimen.destroy({ where:{}});
-//     await Regimen.create({
-//         name: 'planks',
-//         duration: '2',
-//         description: 'Holding the body (light as a feather) stiff as a board develops strength primarily in the core',
-//         difficulty:'moderate'
-//     })
-//   }
-
-//   async function associateWorkoutAndRegimen(){
-//     const regimen = await Workout.findOne({
-//       where: { name: 'Dave'}
-//     });
-//     const workouts = await Regimen.findAll();
-//     await regimen.setWorkouts(workouts);
-//     const associateWorkouts = await Workouts.findAll({
-//       include: Regimen
-//     })
-//     console.log(JSON.stringify(associateWorkouts, null, 2));
-//   }
-
-//   async function seed(){
-//     try{
-//       await createWorkouts();
-//       await createRegimen();
-//       await associateWorkoutAndRegimen();
-//     }catch (e){
-//       console.log(e)
-//       }finally {
-//         process.exit();
-//       }
-//     }
-  
   createWorkouts();
-  
+  createCategory();
