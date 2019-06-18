@@ -13,10 +13,10 @@ export default class PersonalWorkoutRegimen extends Component {
 
 
 async componentDidMount() {
-    // console.log('hi')
+    
         const result = await axios.get(`http://localhost:3001/workouts/regimen/all`)
         const workoutsArray = result.data.result
-console.log("hi", result)
+
         this.setState({
           workoutsArray
     })
@@ -36,7 +36,7 @@ render() {
                <p>Difficulty: {workout.difficulty}</p>
               </div>
             )}
-<h1>hi</h1>
+
                   </div>
         )
     }
