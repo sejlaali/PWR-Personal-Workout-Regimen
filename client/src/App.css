@@ -108,3 +108,12 @@
     }
 
 }
+
+div {
+  color: black;
+  font-size: 26px;
+}
+
+.link {
+  text-decoration: none;
+}

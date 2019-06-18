@@ -13,7 +13,7 @@ class ShowAllCategories extends Component {
 
   async componentDidMount() {
     const response = await axios.get("http://localhost:3001/workouts");
-    const workoutsArray = response.data.workOuts;
+    const categoriesArray = response.data.workOuts;
     this.setState({
       categoriesArray
     });
@@ -24,13 +24,9 @@ class ShowAllCategories extends Component {
       <div>
         {this.state.categoriesArray.map(category => (
           <Link className="link" key={category.id} to={`/category/${category.id}`}>
-            <p>{category.title}</p>
+            <div>{category.title}</div>
           </Link>
         ))}
-
-        <Link to="/workouts/create">
-          <button>Create a new workout</button>
-        </Link>
       </div>
     );
   }
