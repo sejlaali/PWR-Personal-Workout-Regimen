@@ -11,10 +11,10 @@ const sequelize = new Sequelize({
 const Workout = sequelize.define('workout', {
     name: Sequelize.STRING,
     duration: Sequelize.INTEGER,
-    description: Sequelize.STRING,
+    description: Sequelize.TEXT,
     difficulty: Sequelize.STRING,
     regimen: { type: Sequelize.BOOLEAN,
-      defaultValue: false }
+      defaultValue: false },
 });
 
 const Category = sequelize.define('category', {
