@@ -44,7 +44,7 @@ handleClick = async (id) => {
   </div>
 )}
 
-<Link to="/workouts/create">
+<Link to={`/workouts/create/${this.props.match.params.id}`}>
           <button>Create a new workout</button>
         </Link>
         <PersonalWorkoutRegimen />
