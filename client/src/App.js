@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import ShowAllWorkouts from "./Components/ShowAllWorkouts";
 import CreateNewWorkout from "./Components/CreateNewWorkout";
@@ -14,6 +14,13 @@ class App extends Component {
   render() {
     return (
       <div>
+        <nav>
+          <ul>
+          <Link><div>Interval Training</div></Link>
+          <Link><div>Muscle-Focused Training</div></Link>
+          <Link><div>Crossfit Training</div></Link>
+          </ul>
+        </nav>
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/home" component={ShowAllWorkouts} />
