@@ -101,25 +101,25 @@ const { Workout, Category } = require('./models');
               },
   ])
  }
-const createCategory = async () => {
-await Category.create({
+const interval = async () => {
+ await Category.create({
   title: 'Interval Training'
 })
 }
-const createCategory = async () => {
-await Category.create({
+const muscle = async () => {
+ await Category.create({
   title: 'Muscle Focus Training'
 })
 }
-const createCategory = async () => {
-await Category.create({
+const crossfit = async () => {
+ await Category.create({
   title: 'Crossfit Training'
 })
 }
 
-await intervalworkouts.setCategory(createCategory)
-await muscleworkouts.setCategory(createCategory)
-await crossfitworkouts.setCategory(createCategory)
+await intervalworkouts.setCategory(interval)
+await muscleworkouts.setCategory(muscle)
+await crossfitworkouts.setCategory(crossfit)
 
   createWorkouts();
   createCategory();
