@@ -24,6 +24,66 @@
 }
 
 
+
+
+@keyframes draw-st0{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(540deg) rotateX(270deg);
+  }
+}
+
+.maintain{
+  stroke-dasharray: 650;
+  stroke-dashoffset:-650;
+  animation: draw-draggable 22s infinite;
+  transform-origin: 35% 75%;
+  
+}
+
+@keyframes draw-maintain{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(540deg) rotateX(360deg);
+  }
+}
+
+.maintain{
+  stroke-dasharray: 650;
+  stroke-dashoffset:-650;
+  animation: draw-sto 3s infinite;
+  transform-origin: 75% 50%;
+  
+}
+
+
+
+@keyframes draw-maintain{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(720deg) rotateX(270deg);  
+  }
+}
+
+
 #svg1{
   height: 30%;
   width: 30%;
