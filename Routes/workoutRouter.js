@@ -41,6 +41,7 @@ workoutRouter.get('/category/:categoryId/workouts/:id', async (req, res) => {
     where: {
       id: req.params.id,
       categoryId: req.params.categoryId
+      
     }
   })
   res.json({oneworkout})
