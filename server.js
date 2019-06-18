@@ -4,10 +4,13 @@ const logger = require('morgan');
 const cors = require('cors');
 const {workoutRouter} = require('./Routes/workoutRouter');
 
-const { Workout, Regimen } = require('./models');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+app.use((err, req, res, next) => {
+  console.warn(err.stack);
+  res.status(500).json({ msg: err.message });
+});
 app.use(cors());
 
 app.use(logger('dev'));

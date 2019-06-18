@@ -16,25 +16,35 @@ workoutRouter.get("/", async (req, res) => {
 workoutRouter.get("/:category", async (req, res) => {
   const workOuts = await Category.findOne({
     where: {
-      title: req.params.category
+      id: req.params.category
     }
   });
   res.json({
-    workOuts: workOuts
+    workOuts
   });
 });
 
 //GET workouts based on category
-workoutRouter.get("/category/:id/workouts", async (req, res) => {
-  const oneWorkOut = await Workout.findAll({
+workoutRouter.get("/category/:id", async (req, res) => {
+  const oneWorkout = await Workout.findAll({
     where: {
-      category_id: req.params.id
+      categoryId: req.params.id
     }
   });
   res.json({
-    oneWorkOut
+    oneWorkout
   });
 });
+
+workoutRouter.get('/category/:categoryId/workouts/:id', async (req, res) => {
+  const oneworkout = await Workout.findOne({
+    where: {
+      id: req.params.id,
+      categoryId: req.params.categoryId
+    }
+  })
+  res.json({oneworkout})
+})
 
 // POST (create) one workout based on category
 workoutRouter.post("/category/:id/workouts", async (req, res) => {
@@ -47,11 +57,11 @@ workoutRouter.post("/category/:id/workouts", async (req, res) => {
 });
 
 // PUT (edit) one workout in specific category
-workoutRouter.put("/category/:category_id/workouts/:id", async (req, res) => {
+workoutRouter.put("/category/:categoryId/workouts/:id", async (req, res) => {
   const result = await Workout.update(req.body, {
     where: {
       id: req.params.id,
-      category_id: req.params.category_id
+      categoryId: req.params.categoryId
     }
   });
   res.json({ result });
@@ -59,12 +69,12 @@ workoutRouter.put("/category/:category_id/workouts/:id", async (req, res) => {
 
 // DELETE one workout from specific category
 workoutRouter.delete(
-  "/category/:category_id/workouts/:id",
+  "/category/:categoryId/workouts/:id",
   async (req, res) => {
     await Workout.destroy({
       where: {
         id: req.params.id,
-        instructor_id: req.params.category_id
+        categoryId: req.params.categoryId
       }
     });
     res.json({

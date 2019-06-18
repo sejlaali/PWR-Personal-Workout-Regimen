@@ -11,7 +11,7 @@
   .st10{fill:none;stroke:#000000;stroke-miterlimit:10;}
 
   body{
-    background: linear-gradient(to left, rgb(80, 81, 74), beige, rgba(5, 11, 177, 0.934))
+    background: linear-gradient(to left, rgb(80, 81, 74), beige, rgba(4, 9, 150, 0.934))
   }
   
   #outline{
@@ -21,6 +21,66 @@
     stroke-dasharray:2226;
     animation: draw .5s ease-in-out ;
     
+}
+
+
+
+
+@keyframes draw-st0{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(540deg) rotateX(270deg);
+  }
+}
+
+.maintain{
+  stroke-dasharray: 650;
+  stroke-dashoffset:-650;
+  animation: draw-draggable 22s infinite;
+  transform-origin: 35% 75%;
+  
+}
+
+@keyframes draw-maintain{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(540deg) rotateX(360deg);
+  }
+}
+
+.maintain{
+  stroke-dasharray: 650;
+  stroke-dashoffset:-650;
+  animation: draw-sto 3s infinite;
+  transform-origin: 75% 50%;
+  
+}
+
+
+
+@keyframes draw-maintain{
+  from {
+      stroke-dasharray:650;
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  to {
+      
+      stroke-dashoffset:-659;
+      transform: rotateY(720deg) rotateX(270deg);  
+  }
 }
 
 
@@ -47,4 +107,13 @@
         fill: blue;
     }
 
+}
+
+div {
+  color: black;
+  font-size: 26px;
+}
+
+.link {
+  text-decoration: none;
 }
