@@ -22,6 +22,7 @@ constructor(props) {
           `http://localhost:3001/workouts/${this.props.match.params.id}`
         );
         const workout = response.data.oneWorkOut
+
         this.setState({
           description: workout.description,
           name: workout.name,
@@ -38,6 +39,7 @@ constructor(props) {
       })
       }
 
+
       handleOptionChange = (event)=> {
         this.setState({difficulty: event.target.value});
       }
@@ -45,6 +47,8 @@ constructor(props) {
       async handleSubmit(event) {
       event.preventDefault();
       await axios.put(`http://localhost:3001/workouts/${this.props.match.params.id}`, {
+
+
         name: this.state.name,
         description: this.state.description,
         difficulty: this.state.difficulty,
@@ -72,7 +76,9 @@ constructor(props) {
             placeholder="Description"
             value={this.state.description}
           />
+
           <select onChange={this.handleOptionChange} name="difficulty" type="text" value={this.state.difficulty}>
+
             <option>Easy</option>
             <option>Moderate</option>
             <option>Advanced</option>
