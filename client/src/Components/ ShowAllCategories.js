@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-class ShowAllWorkouts extends Component {
+class ShowAllCategories extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      workoutsArray: []
+      categoriesArray: []
     };
   }
 
@@ -15,16 +15,16 @@ class ShowAllWorkouts extends Component {
     const response = await axios.get("http://localhost:3001/workouts");
     const workoutsArray = response.data.workOuts;
     this.setState({
-      workoutsArray
+      categoriesArray
     });
   }
 
   render() {
     return (
       <div>
-        {this.state.workoutsArray.map(workout => (
-          <Link className="link" key={workout.id} to={`/workout/${workout.id}`}>
-            <p>{workout.name}</p>
+        {this.state.categoriesArray.map(category => (
+          <Link className="link" key={category.id} to={`/category/${category.id}`}>
+            <p>{category.title}</p>
           </Link>
         ))}
 
@@ -36,4 +36,4 @@ class ShowAllWorkouts extends Component {
   }
 }
 
-export default ShowAllWorkouts;
+export default ShowAllCategories;
