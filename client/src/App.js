@@ -7,12 +7,20 @@ import CreateNewWorkout from "./Components/CreateNewWorkout";
 import OneWorkout from './Components/OneWorkout'
 import EditWorkout from './Components/EditWorkout'
 
+
+
 class App extends Component {
+
   constructor(props) {
     super(props);
+    this.state ={
+     
   }
+}
+
   render() {
     return (
+
       <div>
         <nav>
           <ul>
