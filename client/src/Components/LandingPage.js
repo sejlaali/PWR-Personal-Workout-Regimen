@@ -33,6 +33,14 @@ class LandingPage extends Component {
     />
     </Link>
 
+    <foreignObject x="1100" y="160" height="300" width="700">
+        <img alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
+
+
+
+    </foreignObject>
+     
+
     <polygon className="st7" points="808.6,258.8 542.7,759.9 1718,883 360,883.5"
     />
     <path d="M804.7,265.1L677.1,505.5L542.6,759l-0.7,1.3l1.5,0.2l624.7,65.4l540.3,56.6l-665.3,0.2L360.9,883l225.6-314.2L804.7,265.1 M812.5,252.5C661.3,463,510.2,673.5,359,884c456.2-0.2,912.3-0.3,1368.5-0.5c-394.7-41.3-789.3-82.7-1184-124 C633.2,590.5,722.8,421.5,812.5,252.5L812.5,252.5z"
