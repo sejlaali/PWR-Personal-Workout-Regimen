@@ -1,58 +1,78 @@
-const express = require('express')
+const express = require("express");
 
-const workoutRouter = express.Router()
-const{ Workout } = require('../models');
+const workoutRouter = express.Router();
+const { Workout, Category } = require("../models");
 // workout routes
 
-workoutRouter.get('/' , async (req, res) => {
-    const workOuts = await Workout.findAll()
-    res.json({
-        workOuts: workOuts
-    })
-})
-
-// GET one workout
-workoutRouter.get('/:id', async (req, res) =>{
-    const oneWorkOut = await Workout.findOne({
-        where:{
-            id: req.params.id
-        },
-    })
-    res.json({
-        oneWorkOut
-    })
-})
-
-// POST (create) one workout
-workoutRouter.post('/', async (req, res)=>{
-    const createWorkOut = await Workout.create(req.body)
-    res.json({
-        createWorkOut
-    })
-})
-
-// PUT (edit) one workout
-workoutRouter.put('/:id' , async (req, res) =>{
-   const result = await Workout.update(req.body ,{
-       where:{
-           id: req.params.id
-       }
-   }) 
-   res.json({result})
-}) 
-
-// DELETE one workout
-workoutRouter.delete('/:id', async(req, res) =>{
-    const deleteWorkOut = await Workout.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    res.json({
-        message: "This workout has been deleted, please add another..."
-    })
+//get all categories
+workoutRouter.get("/", async (req, res) => {
+  const workOuts = await Category.findAll();
+  res.json({
+    workOuts: workOuts
+  });
 });
 
+// GET one category
+workoutRouter.get("/:category", async (req, res) => {
+  const workOuts = await Category.findOne({
+    where: {
+      title: req.params.category
+    }
+  });
+  res.json({
+    workOuts: workOuts
+  });
+});
+
+//GET workouts based on category
+workoutRouter.get("/category/:id/workouts", async (req, res) => {
+  const oneWorkOut = await Workout.findAll({
+    where: {
+      category_id: req.params.id
+    }
+  });
+  res.json({
+    oneWorkOut
+  });
+});
+
+// POST (create) one workout based on category
+workoutRouter.post("/category/:id/workouts", async (req, res) => {
+  const category = await Category.findByPk(req.params.id);
+  const newWorkOut = await Workout.create(req.body);
+  await newWorkOut.setCategory(category);
+  res.json({
+    newWorkOut
+  });
+});
+
+// PUT (edit) one workout in specific category
+workoutRouter.put("/category/:category_id/workouts/:id", async (req, res) => {
+  const result = await Workout.update(req.body, {
+    where: {
+      id: req.params.id,
+      category_id: req.params.category_id
+    }
+  });
+  res.json({ result });
+});
+
+// DELETE one workout from specific category
+workoutRouter.delete(
+  "/category/:category_id/workouts/:id",
+  async (req, res) => {
+    await Workout.destroy({
+      where: {
+        id: req.params.id,
+        instructor_id: req.params.category_id
+      }
+    });
+    res.json({
+      message: "This workout has been deleted, please add another..."
+    });
+  }
+);
+
 module.exports = {
-    workoutRouter
+  workoutRouter
 };
