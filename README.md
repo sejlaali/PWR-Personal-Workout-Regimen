@@ -40,9 +40,10 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 #### SAMPLE.....
 #### MVP 
 
- -Ability to pick from group of interval training workouts
+-Choose from one of the three categories
+-Render 10 workouts per category
+-Add workout from category to PWR
 	-Add to personal Workout regimen (limit of 4)
-	-Show 10 workouts for Interval category
 	-Delete workout from PRW
 	-Create a new workout
 	-Edit workout in list
