@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
-import ShowAllWorkouts from "./Components/ShowAllWorkouts";
+import ShowAllCategories from "./Components/ ShowAllCategories";
 import CreateNewWorkout from "./Components/CreateNewWorkout";
 import OneWorkout from './Components/OneWorkout'
 import EditWorkout from './Components/EditWorkout'
@@ -31,8 +31,8 @@ class App extends Component {
         </nav>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/home" component={ShowAllWorkouts} />
-          <Route exact path="/workout/:id" component={OneWorkout} />
+          <Route exact path="/home" component={ShowAllCategories} />
+          <Route exact path="/category/:id" component={OneCategory} />
           <Route exact path="/workouts/create" component={CreateNewWorkout} />
           <Route exact path="/workout/:id/edit" component={EditWorkout} />
         </Switch>
