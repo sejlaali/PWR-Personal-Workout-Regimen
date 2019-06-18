@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link, Redirect} from 'react-router-dom'
 import PersonalWorkoutRegimen from './PersonalWorkoutRegimen';
 
+
 class OneCategory extends Component {
 constructor(props) {
   super(props)

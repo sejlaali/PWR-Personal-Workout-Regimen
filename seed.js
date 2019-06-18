@@ -1,3 +1,4 @@
+
 const { Workout, Category } = require("./models");
 
 const main = async () => {
@@ -135,7 +136,8 @@ const main = async () => {
     }
   ]);
 
+
   process.exit();
 };
 
-main();
+main()
