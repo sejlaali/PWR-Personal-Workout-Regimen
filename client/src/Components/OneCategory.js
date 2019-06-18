@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {Link, Redirect} from 'react-router-dom'
-import PersonalWorkoutRegimen from './'
 
 class OneCategory extends Component {
 constructor(props) {
@@ -31,7 +30,7 @@ this.setState({
   </div>
 )}
 
-<Link to="/workouts/create">
+<Link to={`/workouts/create/${this.props.match.params.id}`}>
           <button>Create a new workout</button>
         </Link>
       </div>
