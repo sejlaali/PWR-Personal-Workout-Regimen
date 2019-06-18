@@ -8,14 +8,23 @@ import CreateNewWorkout from "./Components/CreateNewWorkout";
 import OneWorkout from './Components/OneWorkout'
 
 
+
+
 class App extends Component {
+
   constructor(props) {
     super(props);
+    this.state ={
+     
   }
+}
+
   render() {
     return (
-
-      <div>
+      <div>      
+        
+     
+      
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/home" component={ShowAllWorkouts} />

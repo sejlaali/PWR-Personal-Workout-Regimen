@@ -1,33 +1,49 @@
-.App {
-  text-align: center;
-}
+.st0{fill:#00000;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#00A28A;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#3217FF;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:hsl(292, 100%, 14%);stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#2300D0;stroke:#000000;stroke-miterlimit:10;}
+	.st6{fill:#8B0012;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:#00455C;}
+	.st8{fill:#2300D0;}
+	.st9{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+  .st10{fill:none;stroke:#000000;stroke-miterlimit:10;}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body{
+    background: linear-gradient(to left, rgb(80, 81, 74), beige, rgba(4, 9, 150, 0.934))
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  #outline{
+    stroke:none;
+    stroke-width: 8px;
+    stroke-dashoffset: -2226;
+    stroke-dasharray:2226;
+    animation: draw .5s ease-in-out ;
+    
+}
+
+
+#svg1{
+  height: 30%;
+  width: 30%;
+}
+
+@keyframes draw{
+    0%{
+        stroke-dasharray:-2226;
+    }
+    25%{
+        stroke:blue;
+        fill: blue;
+    }
+    50%{
+        stroke: blue;
+        fill: white;
+    }
+    100%{
+        stroke-dashoffset:0;
+        stroke: green;
+        fill: blue;
+    }
 }
