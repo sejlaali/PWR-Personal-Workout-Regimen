@@ -36,8 +36,6 @@ class LandingPage extends Component {
     <foreignObject x="1100" y="160" height="300" width="700">
         <img alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
 
-
-
     </foreignObject>
      
 

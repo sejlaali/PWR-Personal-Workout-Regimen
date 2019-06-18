@@ -12,13 +12,13 @@ class App extends Component {
 
   render() {
     return (
-
       <div>
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/home" component={ShowAllCategories} />
           <Route exact path="/category/:id" component={OneCategory} />
-          <Route exact path="/workouts/create" component={CreateNewWorkout} />
+          <Route exact path="/category/workout/:id" component={OneWorkout} />
+          <Route exact path="/workouts/create/:categoryId" component={CreateNewWorkout} />
           <Route exact path="/category/:categoryId/workout/:id/edit" component={EditWorkout} />
         </Switch>
       </div>

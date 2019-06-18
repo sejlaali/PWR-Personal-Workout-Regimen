@@ -10,7 +10,7 @@ constructor(props) {
         name: "",
         description: "",
         difficulty: "",
-        duration: 0
+        duration: 0,
       };
   
       this.handleChange = this.handleChange.bind(this)
