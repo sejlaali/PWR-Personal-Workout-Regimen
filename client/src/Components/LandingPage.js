@@ -31,13 +31,13 @@ class LandingPage extends Component {
     <Link className="" to="/home">
     <path id="outline"className="st6" d="M1887.5,483.5c-476,106.7-952,213.3-1428,320c-108.3-243.7-216.7-487.3-325-731c145.3,129,290.7,258,436,387	C1009.5,467.5,1448.5,475.5,1887.5,483.5z"
     />
-    </Link>
+    
 
     <foreignObject x="1100" y="160" height="300" width="700">
         <img alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
 
     </foreignObject>
-     
+     </Link>
 
     <polygon className="st7" points="808.6,258.8 542.7,759.9 1718,883 360,883.5"
     />
