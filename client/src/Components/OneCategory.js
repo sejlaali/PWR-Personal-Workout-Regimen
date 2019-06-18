@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {Link, Redirect} from 'react-router-dom'
+import PersonalWorkoutRegimen from './PersonalWorkoutRegimen';
 
 class OneCategory extends Component {
 constructor(props) {
@@ -19,14 +20,11 @@ this.setState({
 })
 }
 
-// handleClick = async (e)=>{
-//     e.preventDefault();
-//     const result = await axios.put(`http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`, {
-//      regimen: true
-//     })
-  
-    
-// }
+handleClick = async (id) => {
+    await axios.put(`http://localhost:3001/workouts/regimen/${id}`, {
+     regimen: true
+    })   
+}
 // /category/:categoryId/workouts/:id
 
   render() {
@@ -41,13 +39,14 @@ this.setState({
    <p>Description: {workout.description}</p>
    <p>Duration: {workout.duration}</p>
    <p>Difficulty: {workout.difficulty}</p>
-   <button onClick={this.handleClick}> Add to PWR </button>
+   <button onClick={this.handleClick(workout.id)}> Add to PWR </button>
   </div>
 )}
 
 <Link to="/workouts/create">
           <button>Create a new workout</button>
         </Link>
+        <PersonalWorkoutRegimen />
       </div>
     )
   }

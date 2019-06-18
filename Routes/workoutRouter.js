@@ -67,6 +67,14 @@ workoutRouter.put("/category/:categoryId/workouts/:id", async (req, res) => {
   res.json({ result });
 });
 
+workoutRouter.put("/regimen/:id", async (req, res) => {
+  const result = await Workout.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  });
+  res.json({ result });
+});
 
 workoutRouter.get('/regimen/all', async(req, res)=>{
   const result = await Workout.findAll({
