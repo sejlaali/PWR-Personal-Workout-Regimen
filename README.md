@@ -11,15 +11,14 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Day 1| Project Description | Complete
 |Day 2| Wireframes / Priority Matrix / Functional Components | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| Pseudocode / actual code | Incomplete
+|Day 4| Pseudocode / actual code | Complete
 |Day 5| Initial Clickable Model  | Incomplete
 |Day 6| MVP | Incomplete
 |Day 7| Present | Incomplete
 
 
 ## Project Description
-
-Workout app where there is a list of about 10 workouts, and the user gets to choose 4 from the list and add it to their personal workout regimen. Within the 10, they can create new workouts, delete a workout and edit a workout. 
+User can choose one of the three categories. Then a list of about 10 workouts will render, and the user gets to choose 4 from the list and add it to their personal workout regimen. Within the 10, they can create new workouts, delete a workout and edit a workout. 
 
 ## Wireframes
 
@@ -76,17 +75,17 @@ Each category of training will have 10 workouts that a user can choose from.
 | Personal Workout Regimen | From the list of workouts, we want our users to be able to select 4 out of the 10 workouts to add to their Personal Workout Regimen. This component will render the 4 workouts chosen|
 
 
-
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | Landing Page | L | 3hrs| hrs |
-| List of Workouts | H | 3hrs| hrs |
-| Create New Workout | H | 3hrs| hrs |
-| Show One Specific Workout | H | 3hrs| hrs |
-| Personal Workout Regimen | H | 6hrs| hrs |
-| Total | H | 18hrs| 0hrs | 
+|  Backend Server files | H | 4hrs| 4hrs |
+| List of Workouts | H | 3hrs| 3hrs |
+| Create New Workout | H | 3hrs| 2hrs |
+| Show One Specific Workout | H | 3hrs| 2hrs |
+| Personal Workout Regimen | H | 6hrs| 4hrs |
+| Total | H | 21hrs| 15hrs | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
