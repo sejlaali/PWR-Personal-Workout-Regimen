@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 class ShowAllCategories extends Component {
   constructor(props) {
     super(props);
@@ -21,10 +20,10 @@ class ShowAllCategories extends Component {
 
   render() {
     return (
-      <div>
+      <div className="categories">
         {this.state.categoriesArray.map(category => (
           <Link className="link" key={category.id} to={`/category/${category.id}`}>
-            <div>{category.title}</div>
+            <div className="category-title">{category.title}</div>
           </Link>
         ))}
       </div>
