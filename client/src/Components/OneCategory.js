@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
 import PersonalWorkoutRegimen from "./PersonalWorkoutRegimen";
+import './PWR.css'
 
 class OneCategory extends Component {
   constructor(props) {
@@ -47,18 +48,23 @@ class OneCategory extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: 'black'}}>
+        <h1>PWR<span>Personal Workout Regimen</span></h1>
+
         {this.state.workoutsArray.map((workout) => (
-          <div>
-            <Link
+          <div className="one-category">
+            <Link className="link"
               to={`/category/${workout.categoryId}/workout/${workout.id}/edit`}
             >
-              <h3>{workout.name}</h3>
+              <h3 className="workout-name">{workout.name}</h3>
             </Link>
-            <p>Description: {workout.description}</p>
-            <p>Duration: {workout.duration}</p>
-            <p>Difficulty: {workout.difficulty}</p>
-            <button onClick={() => {this.handleClick(workout.id)}}> Add to PWR </button>
+            <div className="workout-container">
+            <p className="workout">Description: {workout.description}</p>
+            <p className="workout">Duration: {workout.duration}</p>
+            <p className="workout">Difficulty: {workout.difficulty}</p>
+            <button className="delete" onClick={() => {this.handleClick(workout.id)}}> Add to PWR </button>
+           <hr/>
+            </div>
           </div>
         ))}
 

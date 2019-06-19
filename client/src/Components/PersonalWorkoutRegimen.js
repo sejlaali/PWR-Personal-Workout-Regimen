@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-
+import './PWR.css'
 export default class PersonalWorkoutRegimen extends Component {
   constructor(props) {
     super(props);
@@ -22,16 +21,17 @@ export default class PersonalWorkoutRegimen extends Component {
 
   render() {
     return (
-      <div>
+      <div className="personal-workout-regimen">
         {this.props.regimenArray.map((workout) => (
           <div>
-            <h3>{workout.name}</h3>
-            <p>Description: {workout.description}</p>
-            <p>Duration: {workout.duration}</p>
-            <p>Difficulty: {workout.difficulty}</p>
+            <h3 className="pwr-workout">{workout.name}</h3>
+            <p className="pwr-workouts">Description: {workout.description}</p>
+            <p className="pwr-workouts">Duration: {workout.duration}</p>
+            <p className="pwr-workouts">Difficulty: {workout.difficulty}</p>
             <button onClick={() => {this.handleClick(workout.id)}}>
               Delete from PWR
             </button>
+           <hr/>
           </div>
         ))}
       </div>
