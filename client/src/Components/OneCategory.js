@@ -3,13 +3,22 @@ import axios from 'axios'
 import {Link, Redirect} from 'react-router-dom'
 import PersonalWorkoutRegimen from './PersonalWorkoutRegimen';
 
-
 class OneCategory extends Component {
-constructor(props) {
-  super(props)
+  constructor(props) {
+    super(props);
 
-  this.state = {
-    workoutsArray: []
+    this.state = {
+      workoutsArray: []
+    };
+  }
+  async componentDidMount() {
+    const workouts = await axios.get(
+      `http://localhost:3001/workouts/category/${this.props.match.params.id}`
+    );
+    const workoutsArray = workouts.data.oneWorkout;
+    this.setState({
+      workoutsArray
+    });
   }
   // this.handleClick = this.handleClick.bind(this)
 }
@@ -32,7 +41,6 @@ handleClick = async (id) => {
     console.log(this.state.workoutsArray);
     return (
       <div>
-     
         
 {this.state.workoutsArray.map(workout => 
   <div>
@@ -49,8 +57,7 @@ handleClick = async (id) => {
         </Link>
         <PersonalWorkoutRegimen />
       </div>
-    )
+    );
   }
-}
 
-export default OneCategory
+export default OneCategory;
