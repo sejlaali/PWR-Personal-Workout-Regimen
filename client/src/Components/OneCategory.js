@@ -8,30 +8,58 @@ class OneCategory extends Component {
     super(props);
 
     this.state = {
-      workoutsArray: []
+      workoutsArray: [],
+      regimenArray: []
     };
   }
 
-  async componentDidMount() {
+   componentDidMount() {
+     this.getWorkouts()
+    // const workouts = await axios.get(
+    //   `http://localhost:3001/workouts/category/${this.props.match.params.id}`
+    // );
+    // const workoutsArr = workouts.data.oneWorkout;
+    // let workoutsArray = [...workoutsArr]
+    // this.setState({
+    //   workoutsArray
+    // });
+    // console.log(this.state.workoutsArray)
+  }
+
+  getWorkouts = async () => {
     const workouts = await axios.get(
       `http://localhost:3001/workouts/category/${this.props.match.params.id}`
     );
     const workoutsArray = workouts.data.oneWorkout;
+    // let workoutsArray = [...workoutsArr]
     this.setState({
       workoutsArray
     });
+    console.log(this.state.workoutsArray)
   }
 
   handleClick = async (id) => {
     await axios.put(`http://localhost:3001/workouts/regimen/${id}`, {
       regimen: true
     });
+    this.getWorkouts();
+    this.getRegimen();
   };
+
+  getRegimen = async () => {
+    const result = await axios.get(
+      `http://localhost:3001/workouts/regimen/true`
+    );
+    const regimenArray = result.data.result;
+    this.setState({
+      regimenArray
+    });
+  }
 
   render() {
     return (
       <div>
-        {this.state.workoutsArray.map(workout => (
+        {this.state.workoutsArray.map((workout) => (
           <div>
             <Link
               to={`/category/${workout.categoryId}/workout/${workout.id}/edit`}
@@ -41,14 +69,14 @@ class OneCategory extends Component {
             <p>Description: {workout.description}</p>
             <p>Duration: {workout.duration}</p>
             <p>Difficulty: {workout.difficulty}</p>
-            <button onClick={this.handleClick(workout.id)}> Add to PWR </button>
+            <button onClick={() => {this.handleClick(workout.id)}}> Add to PWR </button>
           </div>
         ))}
 
         <Link to={`/workouts/create/${this.props.match.params.id}`}>
           <button>Create a new workout</button>
         </Link>
-        <PersonalWorkoutRegimen />
+        <PersonalWorkoutRegimen getWorkouts={this.getWorkouts} getRegimen={this.getRegimen} regimenArray={this.state.regimenArray}/>
       </div>
     );
   }
