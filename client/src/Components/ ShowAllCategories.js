@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './PWR.css'
 class ShowAllCategories extends Component {
   constructor(props) {
     super(props);
@@ -20,10 +21,12 @@ class ShowAllCategories extends Component {
 
   render() {
     return (
+      
       <div className="categories">
         {this.state.categoriesArray.map(category => (
+                 
           <Link className="link" key={category.id} to={`/category/${category.id}`}>
-            <div className="category-title">{category.title}</div>
+            <div style={{background: `url(${category.background_url})`, backgroundSize:'cover', backgroundRepeat: 'no-repeat',   backgroundPosition: '49% 0'}} className="category-title"><p>{category.title}</p></div>
           </Link>
         ))}
       </div>
@@ -31,4 +34,6 @@ class ShowAllCategories extends Component {
   }
 }
 
+
+// style={{background: url(`${category.background_url}`)}} 
 export default ShowAllCategories;

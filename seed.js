@@ -5,15 +5,18 @@ const {
 
 const main = async () => {
   await Category.create({
-    title: "Interval Training"
+    title: "Interval",
+    background_url: 'https://images.pexels.com/photos/2294403/pexels-photo-2294403.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260'
   });
 
   await Category.create({
-    title: "Muscle Focus Training"
+    title: "Muscle Focus",
+    background_url: 'https://images.pexels.com/photos/841131/pexels-photo-841131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
   });
 
   await Category.create({
-    title: "Crossfit Training"
+    title: "Crossfit",
+    background_url: 'https://images.pexels.com/photos/1851820/pexels-photo-1851820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
   });
 
   await Workout.bulkCreate([{

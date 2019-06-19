@@ -15,15 +15,6 @@ class OneCategory extends Component {
 
    componentDidMount() {
      this.getWorkouts()
-    // const workouts = await axios.get(
-    //   `http://localhost:3001/workouts/category/${this.props.match.params.id}`
-    // );
-    // const workoutsArr = workouts.data.oneWorkout;
-    // let workoutsArray = [...workoutsArr]
-    // this.setState({
-    //   workoutsArray
-    // });
-    // console.log(this.state.workoutsArray)
   }
 
   getWorkouts = async () => {
@@ -31,11 +22,9 @@ class OneCategory extends Component {
       `http://localhost:3001/workouts/category/${this.props.match.params.id}`
     );
     const workoutsArray = workouts.data.oneWorkout;
-    // let workoutsArray = [...workoutsArr]
     this.setState({
       workoutsArray
     });
-    console.log(this.state.workoutsArray)
   }
 
   handleClick = async (id) => {
