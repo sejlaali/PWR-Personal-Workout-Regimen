@@ -44,7 +44,7 @@ class CreateNewWorkout extends Component {
 
   render() {
       return (
-          <div>
+        <div>
           {this.state.redirect ? <Redirect to={`/category/${this.props.match.params.categoryId}`}/> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input
