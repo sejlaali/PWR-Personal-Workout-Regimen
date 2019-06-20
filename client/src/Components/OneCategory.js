@@ -71,6 +71,7 @@ class OneCategory extends Component {
             <p className="workout">{workout.description}</p>
             <p className="workout">Duration: {workout.duration} min</p>
             <p className="workout">Difficulty: {workout.difficulty}</p>
+            <iframe width="400" height="250" src={`${workout.youtube_url}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe>
             <i className="add fas fa-plus" onClick={() => {this.handleClick(workout.id)}}></i>
            <hr/>
             </div>

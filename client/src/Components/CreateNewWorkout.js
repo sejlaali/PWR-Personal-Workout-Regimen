@@ -10,7 +10,8 @@ class CreateNewWorkout extends Component {
       name: "",
       description: "",
       difficulty: "",
-      duration: 0
+      duration: 0,
+      youtube_url: ""
     };
 
     this.handleChange = this.handleChange.bind(this)
@@ -32,7 +33,8 @@ class CreateNewWorkout extends Component {
       description: this.state.description,
       difficulty: this.state.difficulty,
       duration: this.state.duration,
-      categoryId: this.props.match.params.categoryId
+      categoryId: this.props.match.params.categoryId,
+      youtube_url: this.state.youtube_url
     })
     this.setState({
       redirect: true
@@ -63,6 +65,7 @@ class CreateNewWorkout extends Component {
             <option>Advanced</option>
           </select>
           <input name="duration" type="integer" value={this.state.duration} />
+          <input name="youtube_url" type="text" placeholder="Youtube URL" value={this.state.youtube_url} />
           <br />
           <button type="submit">Submit</button>
         </form>

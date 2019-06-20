@@ -11,6 +11,7 @@ constructor(props) {
         description: "",
         difficulty: "",
         duration: 0,
+        youtube_url: ""
       };
   
       this.handleChange = this.handleChange.bind(this)
@@ -28,7 +29,8 @@ constructor(props) {
           description: workout.description,
           name: workout.name,
           difficulty: workout.difficulty,
-          duration: workout.duration
+          duration: workout.duration,
+          youtube_url: workout.youtube_url
         });
       };
 
@@ -52,7 +54,8 @@ constructor(props) {
         name: this.state.name,
         description: this.state.description,
         difficulty: this.state.difficulty,
-        duration: this.state.duration
+        duration: this.state.duration,
+        youtube_url: this.state.youtube_url
       })
       this.setState({
         redirect: true
@@ -89,6 +92,7 @@ constructor(props) {
             <option>Advanced</option>
           </select>
           <input name="duration" type="integer" value={this.state.duration} />
+          <input name="youtube_url" type="text" value={this.state.youtube_url}/>
           <br />
           <button type="submit">Submit</button>
         </form>
