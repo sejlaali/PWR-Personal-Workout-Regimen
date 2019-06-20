@@ -12,8 +12,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Day 2| Wireframes / Priority Matrix / Functional Components | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| Pseudocode / actual code | Complete
-|Day 5| Initial Clickable Model  | Incomplete
-|Day 6| MVP | Incomplete
+|Day 5| Initial Clickable Model  | Complete
+|Day 6| MVP | Complete
 |Day 7| Present | Incomplete
 
 
@@ -69,10 +69,11 @@ Each category of training will have 10 workouts that a user can choose from.
 | Component | Description | 
 | --- | :---: |  
 | Landing Page | This will render landing page/component that will use svgs | 
-| List of Workouts | This will render list of workout options from our model|
-| Create a new workout | This will be rendered on the List of Workouts component & will allow the user to create a new workout|
-| Show One Specific Workout | This will render the workout that the user clicked on and will have all info about workout shown, as well as ability to edit the workout information and delete it|
-| Personal Workout Regimen | From the list of workouts, we want our users to be able to select 4 out of the 10 workouts to add to their Personal Workout Regimen. This component will render the 4 workouts chosen|
+| Show All Categories | This will render 3 categories that a user can choose from | 
+| One Category | This will render list of workout options from our model based on category chosen/clicked on|
+| Create a new workout | This will be rendered on the One Category component & will allow the user to create a new workout|
+| Edit a workout | This will be linked to the workout names where the user will be able to click on the name and edit one of the workout fields|
+| Personal Workout Regimen | From the list of workouts, we want our users to be able to select  workouts to add to their Personal Workout Regimen|
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
@@ -81,9 +82,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: |
 | Landing Page | L | 3hrs| hrs |
 |  Backend Server files | H | 4hrs| 4hrs |
-| List of Workouts | H | 3hrs| 3hrs |
+| Show All Categories | H | 3hrs| 3hrs |
 | Create New Workout | H | 3hrs| 2hrs |
-| Show One Specific Workout | H | 3hrs| 2hrs |
+| One Category | H | 3hrs| 2hrs |
 | Personal Workout Regimen | H | 6hrs| 4hrs |
 | Total | H | 21hrs| 15hrs | 
 
