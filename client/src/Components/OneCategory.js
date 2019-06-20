@@ -55,7 +55,10 @@ class OneCategory extends Component {
     return (
       <div style={{backgroundColor: 'black'}}>
       {this.state.redirect ? <Redirect to='/home'/> : null}
-        <h1 onClick={this.handleRedirect}>PWR<span>Personal Workout Regimen</span></h1>
+        <h1 onClick={this.handleRedirect}>
+          
+        <img id="PWR2" alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
+          <span id="PWR3">Personal Workout Regimen</span></h1>
 
         {this.state.workoutsArray.map((workout) => (
           <div className="one-category">
@@ -65,8 +68,8 @@ class OneCategory extends Component {
               <h3 className="workout-name">{workout.name}</h3>
             </Link>
             <div className="workout-container">
-            <p className="workout">Description: {workout.description}</p>
-            <p className="workout">Duration: {workout.duration}</p>
+            <p className="workout">{workout.description}</p>
+            <p className="workout">Duration: {workout.duration} min</p>
             <p className="workout">Difficulty: {workout.difficulty}</p>
             <i className="add fas fa-plus" onClick={() => {this.handleClick(workout.id)}}></i>
            <hr/>
@@ -75,7 +78,7 @@ class OneCategory extends Component {
         ))}
 
         <Link to={`/workouts/create/${this.props.match.params.id}`}>
-          <button>Create a new workout</button>
+          <button id="createButton">Create a new workout</button>
         </Link>
         <PersonalWorkoutRegimen getWorkouts={this.getWorkouts} getRegimen={this.getRegimen} regimenArray={this.state.regimenArray}/>
       </div>
