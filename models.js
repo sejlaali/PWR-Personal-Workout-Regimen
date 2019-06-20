@@ -18,7 +18,8 @@ const Workout = sequelize.define('workout', {
 });
 
 const Category = sequelize.define('category', {
-    title: Sequelize.STRING
+    title: Sequelize.STRING,
+    background_url: Sequelize.TEXT
 });
 
 Category.hasMany(Workout)

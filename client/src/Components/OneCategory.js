@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
 import PersonalWorkoutRegimen from "./PersonalWorkoutRegimen";
+import './PWR.css'
 
 class OneCategory extends Component {
   constructor(props) {
@@ -9,21 +10,13 @@ class OneCategory extends Component {
 
     this.state = {
       workoutsArray: [],
-      regimenArray: []
+      regimenArray: [],
+      redirect: false
     };
   }
 
    componentDidMount() {
      this.getWorkouts()
-    // const workouts = await axios.get(
-    //   `http://localhost:3001/workouts/category/${this.props.match.params.id}`
-    // );
-    // const workoutsArr = workouts.data.oneWorkout;
-    // let workoutsArray = [...workoutsArr]
-    // this.setState({
-    //   workoutsArray
-    // });
-    // console.log(this.state.workoutsArray)
   }
 
   getWorkouts = async () => {
@@ -31,11 +24,9 @@ class OneCategory extends Component {
       `http://localhost:3001/workouts/category/${this.props.match.params.id}`
     );
     const workoutsArray = workouts.data.oneWorkout;
-    // let workoutsArray = [...workoutsArr]
     this.setState({
       workoutsArray
     });
-    console.log(this.state.workoutsArray)
   }
 
   handleClick = async (id) => {
@@ -56,20 +47,30 @@ class OneCategory extends Component {
     });
   }
 
+  handleRedirect = () => {this.setState({
+    redirect: true})
+  }
+
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: 'black'}}>
+      {this.state.redirect ? <Redirect to='/home'/> : null}
+        <h1 onClick={this.handleRedirect}>PWR<span>Personal Workout Regimen</span></h1>
+
         {this.state.workoutsArray.map((workout) => (
-          <div>
-            <Link
+          <div className="one-category">
+            <Link className="link"
               to={`/category/${workout.categoryId}/workout/${workout.id}/edit`}
             >
-              <h3>{workout.name}</h3>
+              <h3 className="workout-name">{workout.name}</h3>
             </Link>
-            <p>Description: {workout.description}</p>
-            <p>Duration: {workout.duration}</p>
-            <p>Difficulty: {workout.difficulty}</p>
-            <button onClick={() => {this.handleClick(workout.id)}}> Add to PWR </button>
+            <div className="workout-container">
+            <p className="workout">Description: {workout.description}</p>
+            <p className="workout">Duration: {workout.duration}</p>
+            <p className="workout">Difficulty: {workout.difficulty}</p>
+            <i className="add fas fa-plus" onClick={() => {this.handleClick(workout.id)}}></i>
+           <hr/>
+            </div>
           </div>
         ))}
 

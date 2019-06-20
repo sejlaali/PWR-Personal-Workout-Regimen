@@ -28,7 +28,8 @@ workoutRouter.get("/:category", async (req, res) => {
 workoutRouter.get("/category/:id", async (req, res) => {
   const oneWorkout = await Workout.findAll({
     where: {
-      categoryId: req.params.id
+      categoryId: req.params.id,
+      regimen: false
     }
   });
   res.json({
@@ -77,10 +78,10 @@ workoutRouter.put("/regimen/:id", async (req, res) => {
   res.json({ result });
 });
 
-workoutRouter.get('/regimen/all', async(req, res)=>{
+workoutRouter.get('/regimen/:boolean', async(req, res)=>{
   const result = await Workout.findAll({
     where:{
-      regimen: true
+      regimen: req.params.boolean
     }
   })
   res.json({
