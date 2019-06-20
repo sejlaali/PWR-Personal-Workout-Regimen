@@ -12,7 +12,7 @@ class ShowAllCategories extends Component {
   }
 
   async componentDidMount() {
-    const response = await axios.get("http://localhost:3001/workouts");
+    const response = await axios.get("/workouts");
     const categoriesArray = response.data.workOuts;
     this.setState({
       categoriesArray

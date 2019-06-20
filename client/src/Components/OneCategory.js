@@ -21,7 +21,7 @@ class OneCategory extends Component {
 
   getWorkouts = async () => {
     const workouts = await axios.get(
-      `http://localhost:3001/workouts/category/${this.props.match.params.id}`
+      `/workouts/category/${this.props.match.params.id}`
     );
     const workoutsArray = workouts.data.oneWorkout;
     this.setState({
@@ -30,7 +30,7 @@ class OneCategory extends Component {
   }
 
   handleClick = async (id) => {
-    await axios.put(`http://localhost:3001/workouts/regimen/${id}`, {
+    await axios.put(`/workouts/regimen/${id}`, {
       regimen: true
     });
     this.getWorkouts();
@@ -39,7 +39,7 @@ class OneCategory extends Component {
 
   getRegimen = async () => {
     const result = await axios.get(
-      `http://localhost:3001/workouts/regimen/true`
+      `/workouts/regimen/true`
     );
     const regimenArray = result.data.result;
     this.setState({

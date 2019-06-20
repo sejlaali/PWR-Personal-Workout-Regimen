@@ -22,7 +22,7 @@ constructor(props) {
   
     componentDidMount = async () => {
         const response = await axios.get(
-          `http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`
+          `/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`
         );
         const workout = response.data.oneworkout
 
@@ -50,7 +50,7 @@ constructor(props) {
     
       async handleSubmit(event) {
       event.preventDefault();
-      await axios.put(`http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`, {
+      await axios.put(`/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`, {
 
         name: this.state.name,
         description: this.state.description,
