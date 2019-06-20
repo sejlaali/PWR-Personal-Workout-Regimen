@@ -13,7 +13,7 @@ export default class PersonalWorkoutRegimen extends Component {
   }
 
   handleClick = async (id) => {
-    await axios.put(`http://localhost:3001/workouts/regimen/${id}`, {
+    await axios.put(`/workouts/regimen/${id}`, {
       regimen: false
     });
     this.props.getWorkouts()

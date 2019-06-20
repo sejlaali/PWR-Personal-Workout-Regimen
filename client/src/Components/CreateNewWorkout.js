@@ -30,7 +30,7 @@ class CreateNewWorkout extends Component {
   async handleSubmit(event) {
     event.preventDefault();
     await axios.post(
-      `http://localhost:3001/workouts/category/${
+      `/workouts/category/${
         this.props.match.params.categoryId
       }/workouts`,
       {

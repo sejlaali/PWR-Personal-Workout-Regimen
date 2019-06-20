@@ -7,7 +7,6 @@ import CreateNewWorkout from "./Components/CreateNewWorkout";
 import EditWorkout from './Components/EditWorkout'
 import OneCategory from './Components/OneCategory'
 
-
 class App extends Component {
 
   render() {
