@@ -64,6 +64,11 @@ constructor(props) {
             <div>
           {this.state.redirect ? <Redirect to={`/category/${this.props.match.params.categoryId}`}/> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          
+         
+        <img id="PWReditPage" alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
+       
+        <br />
           <input
             name="name"
             type="text"

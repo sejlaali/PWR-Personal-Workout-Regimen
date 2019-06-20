@@ -15,7 +15,7 @@
   }
   #personal{
     color: white;
-    
+
   }
   
   #outline{
@@ -42,6 +42,8 @@
       transform: rotateY(540deg) rotateX(270deg);
   }
 }
+
+
 
 .maintain{
   stroke-dasharray: 650;
