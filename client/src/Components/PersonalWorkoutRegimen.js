@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import './PWR.css'
+
 export default class PersonalWorkoutRegimen extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
   }
 
@@ -29,10 +30,11 @@ export default class PersonalWorkoutRegimen extends Component {
             <p className="pwr-workouts">Description: {workout.description}</p>
             <p className="pwr-workouts">Duration: {workout.duration}</p>
             <p className="pwr-workouts">Difficulty: {workout.difficulty}</p>
-            <i class="fas fa-ban" onClick={() => {this.handleClick(workout.id)}}></i>
+            <i class="fas fa-minus-circle" onClick={() => {this.handleClick(workout.id)}}></i>
             {/* <button onClick={() => {this.handleClick(workout.id)}}> */}
               {/* Delete from PWR
             </button> */}
+            {/* <i class="fas fa-minus-circle"></i> */}
            <hr/>
           </div>
         ))}
