@@ -22,6 +22,7 @@ export default class PersonalWorkoutRegimen extends Component {
   render() {
     return (
       <div className="personal-workout-regimen">
+    {this.props.regimenArray.length === 0 ? <div>Personal Workout Regimen is designed to replace your paper workout journal. Add exercises of your choice  to build your own personal PWR.</div> : null}
         {this.props.regimenArray.map((workout) => (
           <div>
             <h3 className="pwr-workout">{workout.name}</h3>

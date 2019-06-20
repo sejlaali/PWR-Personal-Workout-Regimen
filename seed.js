@@ -22,7 +22,7 @@ const main = async () => {
   await Workout.bulkCreate([{
       name: "Sit-Ups",
       duration: 2,
-      description: "an exercise in which a person lies flat on the back, lifts the torso to a sitting position, and then lies flat again without changing the position of the legs",
+      description: "An exercise in which a person lies flat on the back, lifts the torso to a sitting position, and then lies flat again without changing the position of the legs",
       difficulty: "Easy",
       categoryId: 1,
       youtube_url: "https://www.youtube.com/embed/1fbU_MkV7NE"
