@@ -1,0 +1,205 @@
+html {
+  background-color: black;
+}
+.category-title > p {
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 11px;
+}
+
+.category-title {
+  min-width: 32vw;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.category-title:hover {
+  opacity: 1;
+}
+
+.categories {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+h1 {
+  text-align: left;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+  font-size: 90px;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 200;
+  padding-left: 25%;
+  cursor: pointer;
+}
+
+.one-category {
+  width: 57%;
+  color: white;
+  margin-top: -15px;
+  margin-left: 2%;
+  font-family: "PT Sans", sans-serif;
+}
+
+.workout-container {
+  width: 100%;
+  color: white;
+}
+
+.personal-workout-regimen {
+  position: fixed;
+  right: 0;
+  top: 2%;
+  width: 30%;
+  margin-right: 2%;
+  height: 100%;
+  border: 2px solid white;
+  overflow: auto;
+  background-color: #0eaeef;
+  box-shadow: 5px 8px 5px white;
+}
+
+.workout-name {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 45px;
+}
+
+.pwr-workouts {
+  color: white;
+}
+
+.pwr-workout {
+  color: white;
+}
+
+.link {
+  text-decoration-style: none;
+  color: #0eaeef;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  color: orangered;
+}
+
+h1 > span {
+  font-size: 30px;
+  display: inline-block;
+  width: 12%;
+  line-height: px;
+  letter-spacing: 1px;
+  padding-left: 10px;
+}
+
+i.fa-plus {
+  text-align: right;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+i.fa-minus-circle {
+  text-align: right;
+  width: 100%;
+  color: black;
+  font-size: 1.5em;
+}
+
+.category-pwr-logo {
+  display: flex;
+  flex-direction: row;
+  font-family: "Permanent Marker", cursive;
+  justify-content: center;
+}
+
+#PWR2 {
+  display: inline-block;
+  height: 110px;
+  width: 150px;
+}
+#PWR3 {
+  width: 30px;
+  line-height: 30px;
+  padding-top: 0;
+  color: white;
+  margin-top: 0;
+}
+
+#createButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: #0eaeef;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+#createButton:hover {
+  background-color: yellow;
+}
+
+#createButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#submitButton {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: yellow;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+#submitButton:hover {
+  background-color: red;
+}
+
+#submitButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#PWReditPage {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+  width: 200px;
+}
+
+.placeholder {
+  text-align: center;
+  margin: 50px;
+  margin-top: 60%;
+  line-height: 40px;
+}

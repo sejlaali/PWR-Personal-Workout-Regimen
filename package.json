@@ -1,0 +1,35 @@
+{
+  "name": "PWR",
+  "version": "1.0.0",
+  "description": "## Project Schedule",
+  "main": "models.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "init": "dropdb --if-exists PWR_db && createdb PWR_db",
+    "reset": "node reset.js",
+    "seed": "node seed.js",
+    "debug": "nodemon --inspect-brk server.js",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "client": "cd client && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/sejlaali/PWR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "psql": "0.0.1",
+    "sequelize": "^5.8.9",
+    "styled-components": "^4.3.1"
+  }
+}
