@@ -48,6 +48,7 @@ class CreateNewWorkout extends Component {
   }
 
   render() {
+
     return (
       <div id="create">
         {this.state.redirect ? (
