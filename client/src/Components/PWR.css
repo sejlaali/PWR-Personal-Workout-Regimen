@@ -115,10 +115,10 @@ i.fa-plus {
     font-size: 1.5em;
 }
 
-i.fa-ban {
+i.fa-minus-circle {
     text-align: right;
     width: 100%;
-    color: red;
+    color: black;
     font-size: 1.5em;
 }
 

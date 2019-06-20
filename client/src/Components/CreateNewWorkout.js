@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
+import './CNW.css'
 
 class CreateNewWorkout extends Component {
   constructor(props) {
@@ -61,7 +62,7 @@ class CreateNewWorkout extends Component {
           />
           <select onClick={this.handleChange} onSubmit={this.handleSubmit} name="difficulty" type="text" value={this.state.difficulty}>
             <option>Easy</option>
-            <option>Intermediate</option>
+            <option>Intermediate</option> 
             <option>Advanced</option>
           </select>
           <input name="duration" type="integer" value={this.state.duration} />
