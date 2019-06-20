@@ -116,12 +116,10 @@ i.fa-plus {
 }
 
 
-
-
-i.fa-ban {
+i.fa-minus-circle {
     text-align: right;
     width: 100%;
-    color: red;
+    color: black;
     font-size: 1.5em;
 }
 
@@ -195,13 +193,17 @@ i.fa-ban {
 
 #PWReditPage{
     display: block;
-    /* text-align: center; */
   margin: 0 auto;
   width: 50%;
-  /* border: 3px solid red; */
   padding: 10px;
   height: 100px;
   width: 200px;
-  
+}
+
+.placeholder {
+  text-align: center;
+  margin: 50px;
+  margin-top: 60%;
+  line-height: 40px;
 }
 
