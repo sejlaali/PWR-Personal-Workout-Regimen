@@ -1,9 +1,13 @@
-/* html{
+#editPageImage{
     background-image: url(https://i.ibb.co/tBQ2sLm/Screen-Shot-2019-06-20-at-12-35-36-PM.png);
-    background-position: auto;
+    /* background-position: auto; */
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    /* border: 3px solid red; */
+    width: 1500px;
+    height: 900px;
+   
   } 
 
   form {
@@ -16,7 +20,9 @@
      
       
       
-}
+} 
+
+
 
 input[type=text]{
     background-color: yellow;
@@ -37,4 +43,8 @@ input[type=integer]{
     background-color: yellow;
     color: red;
 }  
-   */
+
+#duration{
+    width: 30px
+}
+   

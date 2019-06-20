@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import './editCSS.css'
 
+
 class EditWorkout extends Component {
 constructor(props) {
     super(props)
@@ -65,14 +66,14 @@ constructor(props) {
       
     render() {
         return (
-            <div>
+            <div id="editPageImage">
           {this.state.redirect ? <Redirect to={`/category/${this.props.match.params.categoryId}`}/> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           
          
-        <img id="PWReditPage" alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
+        <img id="PWReditPage" alt="PWR" src="https://i.ibb.co/HnCbQ4y/PWR-transparant.png "></img>
+ 
        
-        <br />
           <input
             name="name"
             type="text"
@@ -92,7 +93,7 @@ constructor(props) {
             <option>Moderate</option>
             <option>Advanced</option>
           </select>
-          <input name="duration" type="integer" value={this.state.duration} />
+          <input id="duration" name="duration" type="integer" value={this.state.duration} />
           <input name="youtube_url" type="text" value={this.state.youtube_url}/>
           <br />
           <button id="submitButton" type="submit">Submit</button>
