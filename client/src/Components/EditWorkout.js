@@ -25,7 +25,6 @@ constructor(props) {
           `http://localhost:3001/workouts/category/${this.props.match.params.categoryId}/workouts/${this.props.match.params.id}`
         );
         const workout = response.data.oneworkout
-        console.log(workout)
 
         this.setState({
           description: workout.description,

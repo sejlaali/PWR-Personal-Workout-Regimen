@@ -1,50 +1,45 @@
-#editPageImage{
-    background-image: url(https://i.ibb.co/tBQ2sLm/Screen-Shot-2019-06-20-at-12-35-36-PM.png);
-    /* background-position: auto; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    /* border: 3px solid red; */
-    width: 1500px;
-    height: 900px;
-   
-  } 
-
-  form {
-    position: absolute;
-    display: inline-flexbox;
-    text-align: center;
-      width: 100%;
-      margin: 0 auto;
-      color: yellow;
-     
-      
-      
-} 
-
-
-
-input[type=text]{
-    background-color: yellow;
-    color: red;
+#editPageImage {
+  background-image: url(https://i.ibb.co/tBQ2sLm/Screen-Shot-2019-06-20-at-12-35-36-PM.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 1500px;
+  height: 900px;
 }
 
-input[type=textarea]{
-    background-color: yellow;
-    color: red;
+form {
+  position: absolute;
+  display: inline-flexbox;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: yellow;
 }
 
-input[type=integer]{
-    background-color: yellow;
-    color: red;
+input {
+  margin: 10px;
 }
 
-#select{
-    background-color: yellow;
-    color: red;
-}  
-
-#duration{
-    width: 30px
+input[type="text"] {
+  background-color: white;
+  color: red;
 }
-   
+
+input[type="textarea"] {
+  background-color: white;
+  color: red;
+}
+
+input[type="integer"] {
+  background-color: white;
+  color: red;
+}
+
+#select {
+  background-color: white;
+  color: red;
+}
+
+#duration {
+  width: 30px;
+}
