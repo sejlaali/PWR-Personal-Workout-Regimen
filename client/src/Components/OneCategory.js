@@ -10,7 +10,8 @@ class OneCategory extends Component {
 
     this.state = {
       workoutsArray: [],
-      regimenArray: []
+      regimenArray: [],
+      redirect: false
     };
   }
 
@@ -46,10 +47,15 @@ class OneCategory extends Component {
     });
   }
 
+  handleRedirect = () => {this.setState({
+    redirect: true})
+  }
+
   render() {
     return (
       <div style={{backgroundColor: 'black'}}>
-        <h1>PWR<span>Personal Workout Regimen</span></h1>
+      {this.state.redirect ? <Redirect to='/home'/> : null}
+        <h1 onClick={this.handleRedirect}>PWR<span>Personal Workout Regimen</span></h1>
 
         {this.state.workoutsArray.map((workout) => (
           <div className="one-category">
@@ -62,7 +68,7 @@ class OneCategory extends Component {
             <p className="workout">Description: {workout.description}</p>
             <p className="workout">Duration: {workout.duration}</p>
             <p className="workout">Difficulty: {workout.difficulty}</p>
-            <button className="delete" onClick={() => {this.handleClick(workout.id)}}> Add to PWR </button>
+            <i className="add fas fa-plus" onClick={() => {this.handleClick(workout.id)}}></i>
            <hr/>
             </div>
           </div>

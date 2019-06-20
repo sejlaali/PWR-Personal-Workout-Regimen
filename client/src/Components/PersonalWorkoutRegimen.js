@@ -28,9 +28,10 @@ export default class PersonalWorkoutRegimen extends Component {
             <p className="pwr-workouts">Description: {workout.description}</p>
             <p className="pwr-workouts">Duration: {workout.duration}</p>
             <p className="pwr-workouts">Difficulty: {workout.difficulty}</p>
-            <button onClick={() => {this.handleClick(workout.id)}}>
-              Delete from PWR
-            </button>
+            <i class="fas fa-ban" onClick={() => {this.handleClick(workout.id)}}></i>
+            {/* <button onClick={() => {this.handleClick(workout.id)}}> */}
+              {/* Delete from PWR
+            </button> */}
            <hr/>
           </div>
         ))}

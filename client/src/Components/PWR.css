@@ -1,4 +1,7 @@
 /* SHOWALLCATEGORIES COMPONENT */
+html {
+    background-color: black;
+}
 .category-title > p {
   text-align: center;
   font-size: 70px;
@@ -14,7 +17,7 @@
   justify-content: center;
   display: flex;
   height: 100%;
-  opacity: 0.89;
+  opacity: 0.8;
   transition: all 0.5s;
 }
 
@@ -43,6 +46,7 @@ h1 {
     font-family: 'Permanent Marker', cursive;
     font-weight: 200;
     padding-left: 25%;
+    cursor: pointer;
 }
 
 .one-category {
@@ -50,6 +54,8 @@ h1 {
     width: 57%;
     color: white;
     margin-top: -15px;
+    margin-left: 2%;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .workout-container {
@@ -71,18 +77,27 @@ h1 {
 box-shadow: 5px 8px 5px white;
 }
 
+.workout-name {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 45px;
+}
+
 .pwr-workouts {
     color: white;
 }
 
 .pwr-workout {
-    /* border-top: 1px solid white; */
     color: white;
 }
 
 .link {
     text-decoration-style: none;
     color: #0eaeef;
+    transition: all .5s;
+}
+
+.link:hover {
+    color: orangered;
 }
 
 h1 > span {
@@ -92,4 +107,17 @@ h1 > span {
     line-height: 22px;
     letter-spacing: 1px;
     padding-left: 10px;
+}
+
+i.fa-plus {
+    text-align: right;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+i.fa-ban {
+    text-align: right;
+    width: 100%;
+    color: red;
+    font-size: 1.5em;
 }
