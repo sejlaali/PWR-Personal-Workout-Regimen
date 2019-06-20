@@ -15,6 +15,7 @@ const Workout = sequelize.define('workout', {
     difficulty: Sequelize.STRING,
     regimen: { type: Sequelize.BOOLEAN,
       defaultValue: false },
+    youtube_url: Sequelize.TEXT
 });
 
 const Category = sequelize.define('category', {
