@@ -55,10 +55,11 @@ class OneCategory extends Component {
     return (
       <div style={{backgroundColor: 'black'}}>
       {this.state.redirect ? <Redirect to='/home'/> : null}
-        <h1 onClick={this.handleRedirect}>
+        <div className="category-pwr-logo" onClick={this.handleRedirect}>
           
         <img id="PWR2" alt="PWR" src="https://i.ibb.co/LvvkrRr/PWR-ready.png "></img>
-          <span id="PWR3">Personal Workout Regimen</span></h1>
+          
+          <h4 id="PWR3">Personal Workout Regimen</h4></div>
 
         {this.state.workoutsArray.map((workout) => (
           <div className="one-category">

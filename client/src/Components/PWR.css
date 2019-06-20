@@ -115,6 +115,9 @@ i.fa-plus {
     font-size: 1.5em;
 }
 
+
+
+
 i.fa-ban {
     text-align: right;
     width: 100%;
@@ -122,13 +125,26 @@ i.fa-ban {
     font-size: 1.5em;
 }
 
+.category-pwr-logo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Permanent Marker', cursive;
+    justify-content: center
+}
+
 #PWR2{
+    display: inline-block;
     height: 110px;
     width: 150px;
   }
   #PWR3{
-    height: 30px;
-    width:30px;
+    /* height: 5px; */
+    width: 30px;
+    line-height: 30px;
+    padding-top: 0;
+    color: white;
+    margin-top: 0;
+
   }
 
   #createButton{
@@ -154,11 +170,38 @@ i.fa-ban {
   transform: translateY(4px);
 }
 
+#submitButton{
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:black;
+    background-color:yellow;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999
+  }
+
+  #submitButton:hover {background-color: red;}
+
+#submitButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 #PWReditPage{
+    display: block;
+    /* text-align: center; */
   margin: 0 auto;
   width: 50%;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   padding: 10px;
+  height: 100px;
+  width: 200px;
   
 }
 
