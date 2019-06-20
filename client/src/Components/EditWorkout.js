@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
+import './editCSS.css'
 
 class EditWorkout extends Component {
 constructor(props) {
@@ -85,7 +86,7 @@ constructor(props) {
             value={this.state.description}
           />
 
-          <select onChange={this.handleOptionChange} name="difficulty" type="text" value={this.state.difficulty}>
+          <select id="select"onChange={this.handleOptionChange} name="difficulty" type="text" value={this.state.difficulty}>
 
             <option>Easy</option>
             <option>Moderate</option>
@@ -94,7 +95,7 @@ constructor(props) {
           <input name="duration" type="integer" value={this.state.duration} />
           <input name="youtube_url" type="text" value={this.state.youtube_url}/>
           <br />
-          <button type="submit">Submit</button>
+          <button id="submitButton" type="submit">Submit</button>
         </form>
       </div>
         )
