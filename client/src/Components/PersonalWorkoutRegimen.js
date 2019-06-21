@@ -5,7 +5,6 @@ import './PWR.css'
 export default class PersonalWorkoutRegimen extends Component {
   constructor(props) {
     super(props)
-
   }
 
    componentDidMount() {

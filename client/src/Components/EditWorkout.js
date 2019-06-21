@@ -3,7 +3,6 @@ import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import './editCSS.css'
 
-
 class EditWorkout extends Component {
 constructor(props) {
     super(props)

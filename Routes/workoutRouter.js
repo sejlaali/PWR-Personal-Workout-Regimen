@@ -2,9 +2,7 @@ const express = require("express");
 
 const workoutRouter = express.Router();
 const { Workout, Category } = require("../models");
-// workout routes
 
-//get all categories
 workoutRouter.get("/", async (req, res) => {
   const workOuts = await Category.findAll();
   res.json({
@@ -12,7 +10,6 @@ workoutRouter.get("/", async (req, res) => {
   });
 });
 
-// GET one category
 workoutRouter.get("/:category", async (req, res) => {
   const workOuts = await Category.findOne({
     where: {
@@ -24,7 +21,6 @@ workoutRouter.get("/:category", async (req, res) => {
   });
 });
 
-//GET workouts based on category
 workoutRouter.get("/category/:id", async (req, res) => {
   const oneWorkout = await Workout.findAll({
     where: {
@@ -48,7 +44,6 @@ workoutRouter.get('/category/:categoryId/workouts/:id', async (req, res) => {
   res.json({oneworkout})
 })
 
-// POST (create) one workout based on category
 workoutRouter.post("/category/:id/workouts", async (req, res) => {
   const category = await Category.findByPk(req.params.id);
   const newWorkOut = await Workout.create(req.body);
@@ -58,7 +53,6 @@ workoutRouter.post("/category/:id/workouts", async (req, res) => {
   });
 });
 
-// PUT (edit) one workout in specific category
 workoutRouter.put("/category/:categoryId/workouts/:id", async (req, res) => {
   const result = await Workout.update(req.body, {
     where: {
@@ -89,7 +83,7 @@ workoutRouter.get('/regimen/:boolean', async(req, res)=>{
   }
   )
 })
-// DELETE one workout from specific category
+
 workoutRouter.delete(
   "/category/:categoryId/workouts/:id",
   async (req, res) => {

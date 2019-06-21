@@ -26,7 +26,7 @@ class ShowAllCategories extends Component {
         {this.state.categoriesArray.map(category => (
                  
           <Link className="link" key={category.id} to={`/category/${category.id}`}>
-            <div style={{background: `url(${category.background_url})`, backgroundSize:'cover', backgroundRepeat: 'no-repeat',   backgroundPosition: '49% 0'}} className="category-title"><p>{category.title}</p></div>
+            <div style={{background: `url(${category.background_url})`, backgroundSize:'cover', backgroundRepeat: 'no-repeat', backgroundPosition: '49% 0'}} className="category-title"><p>{category.title}</p></div>
           </Link>
         ))}
       </div>
@@ -35,5 +35,4 @@ class ShowAllCategories extends Component {
 }
 
 
-// style={{background: url(`${category.background_url}`)}} 
 export default ShowAllCategories;
